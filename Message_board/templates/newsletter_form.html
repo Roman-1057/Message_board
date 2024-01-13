@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Send Newsletter</title>
+</head>
+<body>
+    <h1>Send Newsletter</h1>
+    <form method="POST">
+        {% csrf_token %}
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required><br><br>
+        <label for="content">Content:</label>
+        <textarea id="content" name="content" required></textarea><br><br>
+        <input type="submit" value="Send">
+    </form>
+</body>
+</html>

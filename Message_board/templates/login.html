@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Вход</title>
+</head>
+<body>
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+
+<table>
+<tr>
+    <td><font size="4">{{ form.username.label_tag }}</font></td>
+    <td><font size="4">{{ form.username }}</font></td>
+</tr>
+<tr>
+    <td><font size="4">{{ form.password.label_tag }}</font></td>
+    <td><font size="4">{{ form.password }}</font></td>
+</tr>
+</table>
+<input type="submit" value="Войти">
+</form>
+</body>
+</html>
